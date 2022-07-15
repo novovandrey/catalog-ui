@@ -1,0 +1,22 @@
+<div class="bottom10">
+  <div class="inline">
+    <mat-card-header class="child2">
+      <mat-card-title>{{datasetName}}</mat-card-title>
+    </mat-card-header>
+  </div>
+  <div class="inline right" >
+    <mat-button-toggle-group [(ngModel)]="area" name="fontStyle" (change)="areaChanged($event)" aria-label="Font Style">
+      <mat-button-toggle checked value="First">First</mat-button-toggle>
+      <mat-button-toggle value="Official">Official</mat-button-toggle>
+      <mat-button-toggle value="Realtime">Realtime</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</div>
+
+<mat-card-content class="child2">
+  <mat-tab-group  backgroundColor="green" [selectedIndex]="selectedTab.value" (selectedIndexChange)="selectedTab.setValue($event)" (selectedTabChange)="tabChanged($event)" animationDuration="0ms">
+    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+      <app-schema-grid></app-schema-grid>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card-content>

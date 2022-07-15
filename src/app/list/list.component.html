@@ -1,0 +1,5 @@
+<mat-selection-list #datasetsSelected [multiple]="false">
+  <mat-list-option (click)="loadDatasetInfo(datasetName)" *ngFor="let datasetName of datasets" [value]="datasetName">
+    {{datasetName}}
+  </mat-list-option>
+</mat-selection-list>

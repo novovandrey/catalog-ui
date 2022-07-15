@@ -1,0 +1,24 @@
+.mat-button-toggle-checked {
+  background-color: #eeeeee;
+}
+
+.mat-tab-label-active {
+  background-color: #eeeeee;
+}
+
+.mat-button-toggle:not(.mat-button-toggle-checked), .mat-tab-label:not(.mat-tab-label-active) {
+  background-color: white;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.right {
+  position: absolute;
+  right: 5%;
+}
+
+.bottom10 {
+  margin-bottom: 10px;
+}

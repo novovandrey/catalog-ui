@@ -1,0 +1,37 @@
+{
+  "schema": {
+    "type" : "record",
+    "name" : "schema",
+    "fields" : [
+      { "name" : "Name" , "type" : "string" },
+      { "name" : "Region" , "type" : "string" },
+      { "name" : "Open" , "type" : "string" },
+      { "name" : "High" , "type" : "string" },
+      { "name" : "Volume" , "type" : "string" },
+      { "name" : "StockQ" , "type" : "string" },
+      { "name" : "Data1" , "type" : "string" },
+      { "name" : "Data2" , "type" : "string" },
+      { "name" : "Data3" , "type" : "string" },
+      { "name" : "Data4" , "type" : "string" },
+      { "name" : "Data5" , "type" : "string" },
+      { "name" : "Qty1" , "type" : "string" },
+      { "name" : "Qty2" , "type" : "string" },
+      { "name" : "Qty" , "type" : "int" }
+    ]
+  } ,
+  "partitionSchema": {
+    "type" : "record",
+    "name" : "partitionSchema",
+    "fields" : [
+      { "name" : "Name" , "type" : "string" },
+      { "name" : "Region" , "type" : "string" },
+      { "name" : "Open" , "type" : "string" },
+      { "name" : "Qty" , "type" : "int" }
+    ]
+  },
+  "partitions": {
+    "data": "s3-store",
+    "filePath": "s3/stock/region/file.parquet",
+    "size": 9
+  }
+}
